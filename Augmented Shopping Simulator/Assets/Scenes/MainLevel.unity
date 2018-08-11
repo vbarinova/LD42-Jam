@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667564, g: 0.48427135, b: 0.5645232, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -738,6 +738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 555204337}
   - component: {fileID: 555204336}
+  - component: {fileID: 555204338}
   m_Layer: 0
   m_Name: GameContoroller
   m_TagString: Untagged
@@ -771,6 +772,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &555204338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555204335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde0ef7eadbc69f44a51766e23998b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adArray:
+  - {fileID: 1396740484501540, guid: 180a59c32ac59044893264fb653e43d7, type: 2}
+  Canvas: {fileID: 1842685003}
 --- !u!1 &627056063
 GameObject:
   m_ObjectHideFlags: 0
