@@ -21,8 +21,8 @@ public class SpawnAds : MonoBehaviour {
 	void Start () {
         numAds = adArray.Length;
 
-        screenWidth = Screen.width;
-        screenHeight = Screen.height;
+        screenWidth = Mathf.Abs(Canvas.GetComponent<RectTransform>().rect.x);
+        screenHeight = Mathf.Abs(Canvas.GetComponent<RectTransform>().rect.y);
 
         Debug.Log("Screen width and height" + screenWidth + " " + screenHeight);
 		
