@@ -6,10 +6,10 @@ public class MainMenuFloat : MonoBehaviour {
 
     private float yaw;
     private float pitch;
-	
-	// Update is called once per frame
-	void Update () {
-        Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
+    private Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
+    // Update is called once per frame
+    void Update () {
+        
         if (screenRect.Contains(Input.mousePosition))
         {
             yaw += -0.15f * Input.GetAxis("Mouse X");
