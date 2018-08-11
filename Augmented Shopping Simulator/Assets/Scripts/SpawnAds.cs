@@ -10,6 +10,9 @@ public class SpawnAds : MonoBehaviour {
     [SerializeField]
     private GameObject Canvas;
 
+    [SerializeField]
+    private GameObject AdContainer;
+
     private int numAds;
     private float screenWidth;
     private float screenHeight;
@@ -82,7 +85,7 @@ public class SpawnAds : MonoBehaviour {
 
         GameObject instantiatedAd = Instantiate(ad, pos, Quaternion.identity);
 
-        instantiatedAd.transform.SetParent(Canvas.transform, false);
+        instantiatedAd.transform.SetParent(AdContainer.transform, false);
 
         Debug.Log("Ad randomly spawned at " + pos);
     }
@@ -123,7 +126,7 @@ public class SpawnAds : MonoBehaviour {
 
         GameObject instantiatedAd = Instantiate(ad, pos, Quaternion.identity);
 
-        instantiatedAd.transform.SetParent(Canvas.transform, false);
+        instantiatedAd.transform.SetParent(AdContainer.transform, false);
 
         Debug.Log("Ad randomly spawned at " + pos);
     }
