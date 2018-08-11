@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667564, g: 0.48427135, b: 0.5645232, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -421,6 +421,35 @@ Prefab:
       propertyPath: m_Name
       value: TempFoodItem (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1969009339974878, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 65242314423612960, guid: fc8b83351a4d8384ebe7055d09e7c60a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65716783223465460, guid: fc8b83351a4d8384ebe7055d09e7c60a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54874632247672496, guid: fc8b83351a4d8384ebe7055d09e7c60a,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114269325954688572, guid: fc8b83351a4d8384ebe7055d09e7c60a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114269325954688572, guid: fc8b83351a4d8384ebe7055d09e7c60a,
+        type: 2}
+      propertyPath: tempParent
+      value: 
+      objectReference: {fileID: 1275590272}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
   m_IsPrefabParent: 0
@@ -573,6 +602,34 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ca15c4e33257f604cbeb4a08db166dd8, type: 2}
+    - target: {fileID: 100008, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}
   m_IsPrefabParent: 0
@@ -925,7 +982,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1275590272}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 852c87f5fad3b2547a4527e5b7393c9b, type: 3}
   m_Name: 
@@ -972,6 +1029,20 @@ Prefab:
     - target: {fileID: 1969009339974878, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
       propertyPath: m_Name
       value: TempFoodItem (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969009339974878, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 54874632247672496, guid: fc8b83351a4d8384ebe7055d09e7c60a,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65242314423612960, guid: fc8b83351a4d8384ebe7055d09e7c60a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
@@ -1081,6 +1152,10 @@ Prefab:
       propertyPath: m_Name
       value: TempFoodItem (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1969009339974878, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
   m_IsPrefabParent: 0
@@ -1126,6 +1201,10 @@ Prefab:
     - target: {fileID: 1969009339974878, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
       propertyPath: m_Name
       value: TempFoodItem (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969009339974878, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc8b83351a4d8384ebe7055d09e7c60a, type: 2}
@@ -1554,3 +1633,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &2125189929
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2125189926}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 56c49a5b9abea7a41b4dd3a1ebb45cbc, type: 3}

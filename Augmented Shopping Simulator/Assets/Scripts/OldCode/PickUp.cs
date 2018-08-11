@@ -12,6 +12,9 @@ public class PickUp : MonoBehaviour {
     private int clickDistance = 300;
     private float throwForce = 20f;
 
+
+    private Vector3 previousGrabPos;
+
 	// Use this for initialization
 	void Start () {
         maincamera = GameObject.FindWithTag("MainCamera");
@@ -36,6 +39,9 @@ public class PickUp : MonoBehaviour {
 
     private void carry(GameObject carryObj)
     {
+        //update by vic
+        previousGrabPos = carryObj.transform.position;
+
         // make obj hoover in front of center
         carryObj.transform.position = Vector3.Lerp(carryObj.transform.position,
                                         maincamera.transform.position + maincamera.transform.forward * distance,
@@ -99,6 +105,13 @@ public class PickUp : MonoBehaviour {
     {
         // reverse everything to pick it up
         carrying = false;
+
+
+        //update by vic
+        Vector3 throwvec = carriedObj.transform.position - previousGrabPos;
+        float speed = throwvec.magnitude / Time.deltaTime;
+        Vector3 throwvel = speed * throwvec.normalized;
+        carriedObj.GetComponent<Rigidbody>().velocity = throwvel;
 
         // set to kinematic so we do not have to worry about gravity
         carriedObj.GetComponent<Rigidbody>().useGravity = true;
