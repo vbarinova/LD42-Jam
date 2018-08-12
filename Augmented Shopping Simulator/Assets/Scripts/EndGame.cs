@@ -7,13 +7,7 @@ public class EndGame : MonoBehaviour {
     private bool gameOver = false;
     private bool gameWon = false;
 
-    private bool startDelay = false;
     private float delay = 8f;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -34,15 +28,14 @@ public class EndGame : MonoBehaviour {
             this.GetComponent<Timer>().stopTimer();
 
             // wait a sec so the ads fill up the screen then stop them
-            startDelay = true;
+            Invoke("stopAds", delay);
 
-            if (delay < 0)
-            {
-                this.GetComponent<SpawnAds>().stopAds();
-            }
         }
-
-        if (startDelay) delay -= Time.deltaTime;
 		
 	}
+
+    private void stopAds()
+    {
+        this.GetComponent<SpawnAds>().stopAds();
+    }
 }
