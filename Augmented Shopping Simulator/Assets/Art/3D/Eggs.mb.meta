@@ -72,6 +72,19 @@ ModelImporter:
     4300020: pSphere11
     4300022: pSphere12
     4300024: pSphere13
+    6400000: pCube1
+    6400002: pSphere10
+    6400004: pSphere11
+    6400006: pSphere12
+    6400008: pSphere13
+    6400010: pSphere2
+    6400012: pSphere3
+    6400014: pSphere4
+    6400016: pSphere5
+    6400018: pSphere6
+    6400020: pSphere7
+    6400022: pSphere8
+    6400024: pSphere9
     9500000: //RootNode
   externalObjects:
   - first:
@@ -113,7 +126,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.3
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
