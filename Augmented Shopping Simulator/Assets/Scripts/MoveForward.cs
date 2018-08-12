@@ -10,7 +10,7 @@ public class MoveForward : MonoBehaviour {
     [SerializeField]
     private GameObject Destination;
 
-    private float speed = 4f;
+    private float speed = 2f;
     private Vector3 move;
 
 	// Use this for initialization

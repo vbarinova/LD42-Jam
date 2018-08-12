@@ -7,9 +7,9 @@ public class PickUp : MonoBehaviour {
     private GameObject maincamera;
     private bool carrying = false;
     private GameObject carriedObj;
-    private float distance = 5f;
+    private float distance = 10f;
     private float smooth = 3f;
-    private int clickDistance = 300;
+    private int clickDistance = 20;
     private float throwForce = 20f;
 
 
