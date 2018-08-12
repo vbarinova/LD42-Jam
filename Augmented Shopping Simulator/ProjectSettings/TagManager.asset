@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - Apple
+  - Bag of Chips
+  - Box O' Food
+  - Can
+  - Carton of Eggs
+  - Milk
+  - Jar of Peanut Butter
+  - Bottle of Wine
+  - Yogurt
   layers:
   - Default
   - TransparentFX
