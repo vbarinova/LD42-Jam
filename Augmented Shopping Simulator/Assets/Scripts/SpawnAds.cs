@@ -20,6 +20,8 @@ public class SpawnAds : MonoBehaviour {
     private float timer = 0;
     private float maxTime = 5f;
 
+    private bool stopSpawn = false;
+
 	// Use this for initialization
 	void Start () {
         numAds = adArray.Length;
@@ -33,18 +35,27 @@ public class SpawnAds : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (timer >= maxTime)
-        {
-            timer = 0;
-            //SpawnAdAnywhere();
-            SpawnAdOuter();
 
-            // decrease time to spawn
-            maxTime -= .2f;
-            Debug.Log("MaxTime: " + maxTime);
+        if (stopSpawn)
+        {
+            // no more spawn
         }
 
-        timer += Time.deltaTime;
+        else
+        {
+            if (timer >= maxTime)
+            {
+                timer = 0;
+                //SpawnAdAnywhere();
+                SpawnAdOuter();
+
+                // decrease time to spawn
+                maxTime -= .2f;
+                Debug.Log("MaxTime: " + maxTime);
+            }
+
+            timer += Time.deltaTime;
+        }
 	}
 
     private void SpawnAdOuter()
@@ -134,5 +145,11 @@ public class SpawnAds : MonoBehaviour {
 
         //Debug.Log("Ad randomly spawned at " + pos);
     }
+
+    public void stopAds()
+    {
+        stopSpawn = true;
+    }
+
 
 }
