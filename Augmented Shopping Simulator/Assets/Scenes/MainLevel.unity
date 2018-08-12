@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667564, g: 0.48427135, b: 0.5645232, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1281,7 +1281,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adArray:
-  - {fileID: 1396740484501540, guid: 180a59c32ac59044893264fb653e43d7, type: 2}
+  - {fileID: 1996319873034484, guid: 3e8341b041a3e744e8b715df8183b104, type: 2}
+  - {fileID: 1099182254145530, guid: 57da72aec4e43ba4eb3ec8de0efd342e, type: 2}
+  - {fileID: 1287108077539598, guid: 25ecbb3509026424abfedd1db2059618, type: 2}
+  - {fileID: 1891107914484904, guid: b72ba5cf7beb75d4e96861fb7cdcc34a, type: 2}
+  - {fileID: 1950309553329688, guid: 119ef6fb8ab27844a98acc5256045949, type: 2}
+  - {fileID: 1978520276252426, guid: b7bb1306afd96e64da661857f1d4892e, type: 2}
+  - {fileID: 1836742407514862, guid: b67ee7a7898cd2f45830e399122a807b, type: 2}
+  - {fileID: 1908219289940642, guid: 5946ae71067d8434a9963488b826a4cc, type: 2}
+  - {fileID: 1589122967248714, guid: a747b687435269041bea6b4a4e93f073, type: 2}
+  - {fileID: 1518417862413220, guid: 499ff57491016824eb4e54fd6ff2295d, type: 2}
+  - {fileID: 1874546442084772, guid: 6f5aad346c2260b4a96047caaaaa50a2, type: 2}
   Canvas: {fileID: 1842685003}
   AdContainer: {fileID: 175999789}
 --- !u!114 &555204339
