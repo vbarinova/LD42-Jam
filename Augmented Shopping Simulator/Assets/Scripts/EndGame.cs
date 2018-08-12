@@ -16,7 +16,7 @@ public class EndGame : MonoBehaviour {
 	void FixedUpdate () {
 
         // check if game won
-        if (this.GetComponent<CartTrigger>().winner())
+        if (this.GetComponent<RandomizeShoppingList>().everythingCollected())
         {
             Debug.Log("You won!");
         }

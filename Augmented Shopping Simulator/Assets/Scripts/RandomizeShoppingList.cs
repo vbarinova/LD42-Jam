@@ -162,4 +162,16 @@ public class RandomizeShoppingList : MonoBehaviour {
         }
     }
 
+    public bool everythingCollected()
+    {
+        for (int i = 0; i < numItems; ++i)
+        {
+            // if collected item is false, not everything collected, return false
+            if (!goal.GetComponent<CartTrigger>().collectedItem(i)) return false;
+        }
+
+        // if never exiyed loop, everything collecetd
+        return true;
+    }
+
 }

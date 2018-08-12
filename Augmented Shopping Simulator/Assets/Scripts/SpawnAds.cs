@@ -27,7 +27,7 @@ public class SpawnAds : MonoBehaviour {
         screenWidth = Mathf.Abs(Canvas.GetComponent<RectTransform>().rect.x);
         screenHeight = Mathf.Abs(Canvas.GetComponent<RectTransform>().rect.y);
 
-        Debug.Log("Screen width and height" + screenWidth + " " + screenHeight);
+        //Debug.Log("Screen width and height" + screenWidth + " " + screenHeight);
 		
 	}
 	
@@ -71,16 +71,16 @@ public class SpawnAds : MonoBehaviour {
             {
                 goodPlacement = true;
 
-                Debug.Log("randWidth: " + randWidth + " adwidth: " + adWidth + " together: " + (randWidth + adWidth) + " < " + screenWidth);
-                Debug.Log("randHeight: " + randHeight + " adHeight: " + adHeight + " together: " + (randHeight + adHeight) + " < " + screenHeight);
+                //Debug.Log("randWidth: " + randWidth + " adwidth: " + adWidth + " together: " + (randWidth + adWidth) + " < " + screenWidth);
+                //Debug.Log("randHeight: " + randHeight + " adHeight: " + adHeight + " together: " + (randHeight + adHeight) + " < " + screenHeight);
             }
             else if (randHeight + adHeight > screenHeight / 2 && randHeight + adHeight < screenHeight - 2 ||
                     randHeight - adHeight > -screenHeight + 2 && randHeight - adHeight < -screenHeight / 2)
             {
                 goodPlacement = true;
 
-                Debug.Log("randWidth: " + randWidth + " adwidth: " + adWidth + " together: " + (randWidth + adWidth) + " < " + screenWidth);
-                Debug.Log("randHeight: " + randHeight + " adHeight: " + adHeight + " together: " + (randHeight + adHeight) + " < " + screenHeight);
+                //Debug.Log("randWidth: " + randWidth + " adwidth: " + adWidth + " together: " + (randWidth + adWidth) + " < " + screenWidth);
+                //Debug.Log("randHeight: " + randHeight + " adHeight: " + adHeight + " together: " + (randHeight + adHeight) + " < " + screenHeight);
             }
         }
 
@@ -91,7 +91,7 @@ public class SpawnAds : MonoBehaviour {
 
         instantiatedAd.transform.SetParent(AdContainer.transform, false);
 
-        Debug.Log("Ad randomly spawned at " + pos);
+        //Debug.Log("Ad randomly spawned at " + pos);
     }
 
     private void SpawnAdAnywhere()
@@ -119,8 +119,8 @@ public class SpawnAds : MonoBehaviour {
                 {
                     goodPlacement = true;
 
-                    Debug.Log("randWidth: " + randWidth + " adwidth: " + adWidth + " together: " + (randWidth + adWidth) + " < " + screenWidth);
-                    Debug.Log("randHeight: " + randHeight + " adHeight: " + adHeight + " together: " + (randHeight + adHeight) + " < " + screenHeight);
+                    //Debug.Log("randWidth: " + randWidth + " adwidth: " + adWidth + " together: " + (randWidth + adWidth) + " < " + screenWidth);
+                    //Debug.Log("randHeight: " + randHeight + " adHeight: " + adHeight + " together: " + (randHeight + adHeight) + " < " + screenHeight);
                 }
             }   
         }
@@ -132,7 +132,7 @@ public class SpawnAds : MonoBehaviour {
 
         instantiatedAd.transform.SetParent(AdContainer.transform, false);
 
-        Debug.Log("Ad randomly spawned at " + pos);
+        //Debug.Log("Ad randomly spawned at " + pos);
     }
 
 }

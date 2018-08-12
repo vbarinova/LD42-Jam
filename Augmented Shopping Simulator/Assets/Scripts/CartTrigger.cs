@@ -11,32 +11,22 @@ public class CartTrigger : MonoBehaviour {
 
     private bool[] collected;
 
-    private bool updateOnce = false;
-
 	// Use this for initialization
 	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (!updateOnce)
+        numItems = gameController.GetComponent<RandomizeShoppingList>().numItemsToCollect();
+
+        Debug.Log("NUM: " + numItems);
+
+        collected = new bool[numItems];
+
+        for (int i = 0; i < numItems; ++i)
         {
-            numItems = gameController.GetComponent<RandomizeShoppingList>().numItemsToCollect();
-
-            Debug.Log("NUM: " + numItems);
-
-            collected = new bool[numItems];
-
-            for (int i = 0; i < numItems; ++i)
-            {
-                collected[i] = false;
-            }
-
-            updateOnce = true;
+            collected[i] = false;
         }
-		
-	}
+
+
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -57,7 +47,7 @@ public class CartTrigger : MonoBehaviour {
                 // mark that sucker as collecetd
                 other.GetComponent<Pickupable>().hasBeenCollected();
 
-                Debug.Log(other.tag + " has been collecetd!");
+                Debug.Log(other.tag + " has been collecetd!" + collected[i]);
 
             }
         }
@@ -82,6 +72,20 @@ public class CartTrigger : MonoBehaviour {
         }
 
         Debug.Log("Yay, you have won");
+        return true;
+    }
+
+    public bool hasWon()
+    {
+        // if all items are collected, then win, yay
+        for (int i = 0; i < numItems; ++i)
+        {
+            Debug.Log("collected bool: " + collected[i]);
+            // if any one item is not collected, no winner
+            if (collected[i] == false) return false;
+        }
+
+        // else, eveything has been collected
         return true;
     }
 
