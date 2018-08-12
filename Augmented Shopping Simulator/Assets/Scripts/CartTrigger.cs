@@ -40,6 +40,7 @@ public class CartTrigger : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(numItems);
         // when an object enters the shopping cart, go through the list of items
         // that need to be collected
         for (int i = 0; i < numItems; ++i)
@@ -73,10 +74,6 @@ public class CartTrigger : MonoBehaviour {
     public bool winner()
     {
         Debug.Log("WHat the hell " + numItems);
-        for (int i = 0; i < numItems; ++i)
-        {
-            Debug.Log(i);
-        }
 
         for (int i = 0; i < numItems; ++i)
         {
