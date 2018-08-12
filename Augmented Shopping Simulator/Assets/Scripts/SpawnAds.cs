@@ -38,6 +38,10 @@ public class SpawnAds : MonoBehaviour {
             timer = 0;
             //SpawnAdAnywhere();
             SpawnAdOuter();
+
+            // decrease time to spawn
+            maxTime -= .2f;
+            Debug.Log("MaxTime: " + maxTime);
         }
 
         timer += Time.deltaTime;

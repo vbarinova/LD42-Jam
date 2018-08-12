@@ -11,20 +11,30 @@ public class CartTrigger : MonoBehaviour {
 
     private bool[] collected;
 
+    private bool updateOnce = false;
+
 	// Use this for initialization
 	void Start () {
-        numItems = gameController.GetComponent<RandomizeShoppingList>().numItemsToCollect();
-
-        collected = new bool[numItems];
-
-        for (int i = 0; i < numItems; ++i)
-        {
-            collected[i] = false;
-        }
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if (!updateOnce)
+        {
+            numItems = gameController.GetComponent<RandomizeShoppingList>().numItemsToCollect();
+
+            Debug.Log("NUM: " + numItems);
+
+            collected = new bool[numItems];
+
+            for (int i = 0; i < numItems; ++i)
+            {
+                collected[i] = false;
+            }
+
+            updateOnce = true;
+        }
 		
 	}
 
@@ -60,12 +70,20 @@ public class CartTrigger : MonoBehaviour {
         }
     }
 
-    public bool checkWinner()
+    public bool winner()
     {
+        Debug.Log("WHat the hell " + numItems);
+        for (int i = 0; i < numItems; ++i)
+        {
+            Debug.Log(i);
+        }
+
         for (int i = 0; i < numItems; ++i)
         {
             if (collected[i] == false) return false;
+            Debug.Log("COLLECTED: " + collected[i]);
         }
+
         Debug.Log("Yay, you have won");
         return true;
     }

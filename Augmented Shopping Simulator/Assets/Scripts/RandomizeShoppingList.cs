@@ -74,6 +74,7 @@ public class RandomizeShoppingList : MonoBehaviour {
             
         }
 
+
     }
 
     public string returnItem(int index)
@@ -123,6 +124,7 @@ public class RandomizeShoppingList : MonoBehaviour {
 
     public bool allCollected(string tag)
     {
+        bool itemInList = false;
         for (int i = 0; i < numItems; ++i)
         {
             // if an item on the list matches the tag and 
@@ -132,10 +134,21 @@ public class RandomizeShoppingList : MonoBehaviour {
                 Debug.Log(tag + " not all collected");
                 return false;
             }
+            // to make sure items that are not in the list do not set off
+            // the winning condition
+            if (tag == itemsToCollect[i]) itemInList = true;
         }
 
-        // else return true
-        return true;
+        // item is in list and has all been connected
+        if (itemInList)
+        {
+            Debug.Log(tag + " hass been fully collected yo!");
+
+            return true;
+        }
+
+        return false;
+        
     }
 
     public void crossOffItem(string tag)
