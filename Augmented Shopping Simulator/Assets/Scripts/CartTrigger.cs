@@ -61,33 +61,6 @@ public class CartTrigger : MonoBehaviour {
         }
     }
 
-    public bool winner()
-    {
-        Debug.Log("WHat the hell " + numItems);
-
-        for (int i = 0; i < numItems; ++i)
-        {
-            if (collected[i] == false) return false;
-            Debug.Log("COLLECTED: " + collected[i]);
-        }
-
-        Debug.Log("Yay, you have won");
-        return true;
-    }
-
-    public bool hasWon()
-    {
-        // if all items are collected, then win, yay
-        for (int i = 0; i < numItems; ++i)
-        {
-            Debug.Log("collected bool: " + collected[i]);
-            // if any one item is not collected, no winner
-            if (collected[i] == false) return false;
-        }
-
-        // else, eveything has been collected
-        return true;
-    }
 
    public bool collectedItem(int index)
     {
