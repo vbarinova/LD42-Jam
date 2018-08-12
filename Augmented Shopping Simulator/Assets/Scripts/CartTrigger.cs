@@ -47,6 +47,8 @@ public class CartTrigger : MonoBehaviour {
                 // mark that sucker as collecetd
                 other.GetComponent<Pickupable>().hasBeenCollected();
 
+                gameController.GetComponent<RandomizeShoppingList>().updateSHoppingList(i);
+
                 Debug.Log(other.tag + " has been collecetd!" + collected[i]);
 
             }

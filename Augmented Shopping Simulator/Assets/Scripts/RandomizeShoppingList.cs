@@ -122,6 +122,20 @@ public class RandomizeShoppingList : MonoBehaviour {
 
     }
 
+    public void updateSHoppingList(int i)
+    {
+        GameObject tempText;
+        char num;
+        int numMinusOne;
+
+        tempText = textArray[i];
+        num = tempText.GetComponent< TextMeshProUGUI>().text[0];
+        numMinusOne = num - 48;
+        numMinusOne -= 1;
+        tempText.GetComponent<TextMeshProUGUI>().text = numMinusOne.ToString() + " " + itemsToCollect[i];
+
+    }
+
     public bool allCollected(string tag)
     {
         bool itemInList = false;
