@@ -49,11 +49,10 @@ public class Timer : MonoBehaviour {
         {
             audioSource.clip = countDown;
             audioSource.Play();
-            Debug.Log("Playing timer sound");
+            //Debug.Log("Playing timer sound");
 
             playSoundOnce = false;
         }
-        Debug.Log(timer);
             
 	}
 

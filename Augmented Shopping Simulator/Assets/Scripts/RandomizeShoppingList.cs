@@ -116,6 +116,17 @@ public class RandomizeShoppingList : MonoBehaviour {
         return numItems;
     }
 
+    public int returnIndex(string tag)
+    {
+        for (int i = 0; i < numItems/2; ++i)
+        {
+            if (tag == itemsToCollect[i]) return i;
+            
+        }
+        // else something went wrong
+        return -1;
+    }
+
     public void displayShoppingList()
     {
         GameObject tempText;

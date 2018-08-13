@@ -33,11 +33,13 @@ public class MoveForward : MonoBehaviour {
         {
             // move player forward in the z direction
             Player.transform.position += transform.forward * speed * Time.deltaTime;
+            //Debug.Log("moving, chooo chooo");
         }
         // if the player has reached the end of the row, stop them
         else
         {
             // do nothing
+            Debug.Log("This should never output");
         }
 
 

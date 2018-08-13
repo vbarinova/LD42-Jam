@@ -51,6 +51,8 @@ public class CartTrigger : MonoBehaviour {
                 // mark that sucker as collecetd
                 other.GetComponent<Pickupable>().hasBeenCollected();
 
+                // convert i to 0-numItems/2
+                int index = gameController.GetComponent<RandomizeShoppingList>().returnIndex(other.tag);
                 gameController.GetComponent<RandomizeShoppingList>().updateSHoppingList(i);
 
                 // play success sound

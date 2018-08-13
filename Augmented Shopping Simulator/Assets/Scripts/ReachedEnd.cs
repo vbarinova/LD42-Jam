@@ -18,7 +18,11 @@ public class ReachedEnd : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        reachedEnd = true;
+        if (other.tag == "player") {
+            reachedEnd = true;
+            Debug.Log("COLLIDING WITH ME: " + other);
+        }
+        
     }
 
     // PUBLIC FUNCTIONS
