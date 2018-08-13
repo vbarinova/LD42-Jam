@@ -35,6 +35,7 @@ public class EndGame : MonoBehaviour {
             // play success sound
             audioSource.clip = success;
             audioSource.Play();
+            Debug.Log("Why are you not playing?");
         }
         // game lost if time out
         else if (this.GetComponent<Timer>().timeEnded())
