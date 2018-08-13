@@ -53,6 +53,11 @@ public class Timer : MonoBehaviour {
 
             playSoundOnce = false;
         }
+
+        if (!playSoundOnce && this.GetComponent<EndGame>().isGameOver())
+        {
+            audioSource.Stop();
+        }
             
 	}
 

@@ -39,7 +39,7 @@ public class MoveForward : MonoBehaviour {
         else
         {
             // do nothing
-            Debug.Log("This should never output");
+            //Debug.Log("This should never output");
         }
 
 

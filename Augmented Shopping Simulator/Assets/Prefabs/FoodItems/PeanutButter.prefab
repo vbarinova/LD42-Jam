@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 114218081432710486}
   m_Layer: 0
   m_Name: PeanutButter
-  m_TagString: Jar of Peanut Butter
+  m_TagString: Peanut Butter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

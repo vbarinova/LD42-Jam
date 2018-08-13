@@ -17,6 +17,7 @@ TagManager:
   - Cart
   - Banana
   - Loaf of Bread
+  - Peanut Butter
   layers:
   - Default
   - TransparentFX

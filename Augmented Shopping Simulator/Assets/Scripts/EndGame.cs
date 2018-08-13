@@ -72,4 +72,9 @@ public class EndGame : MonoBehaviour {
     {
         this.GetComponent<SpawnAds>().stopAds();
     }
+
+    public bool isGameOver()
+    {
+        return m_endGame;
+    }
 }
