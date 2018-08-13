@@ -49,6 +49,13 @@ public class RandomizeShoppingList : MonoBehaviour {
     private void randomizeShoppingList()
     {
         int randIndex, itemCount = 0;
+        int[] alreadyUsed = new int[numItems / 2];
+        bool goodchoice = false;
+
+        for (int i = 0; i < numItems/2; ++i)
+        {
+            alreadyUsed[i] = -1;
+        }
 
         while( itemCount < numItems)
         {
@@ -56,6 +63,28 @@ public class RandomizeShoppingList : MonoBehaviour {
             if (itemCount < numItems/2)
             {
                 randIndex = (int)Mathf.Floor(Random.Range(0f, allItems.Length));
+
+                // make sure there are no duplicates
+                while (!goodchoice)
+                {
+                    goodchoice = true;
+                    for (int i = 0; i < numItems/2; ++i)
+                    {
+                        // bad choice
+                        if (randIndex == alreadyUsed[i])
+                        {
+                            goodchoice = false;
+                        }
+                    }
+
+                    if (!goodchoice)
+                        randIndex = (int)Mathf.Floor(Random.Range(0f, allItems.Length));
+
+                }
+
+                alreadyUsed[itemCount] = randIndex;
+                goodchoice = false; // reset
+
                 itemsToCollect[itemCount] = allItems[randIndex].tag;
 
                 ++itemCount;
