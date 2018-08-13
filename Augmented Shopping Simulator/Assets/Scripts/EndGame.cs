@@ -22,11 +22,14 @@ public class EndGame : MonoBehaviour {
 
     private void Awake()
     {
+
         m_endGame = false;
         audioSource.enabled = false;
         GameOver.enabled = false;
         GameWin.enabled = false;
-        fpscontroller.GetComponent<FirstPersonController>().enabled = true;
+        fpscontroller.GetComponent<FirstPersonController>().m_MouseLook.lockCursor = true;
+        fpscontroller.GetComponent<FirstPersonController>().m_MouseLook.SetCursorLock(true);
+
     }
 
     // Update is called once per frame
@@ -43,7 +46,8 @@ public class EndGame : MonoBehaviour {
 
             audioSource.enabled = true;
             GameWin.enabled = true;
-            fpscontroller.GetComponent<FirstPersonController>().enabled = false;
+            fpscontroller.GetComponent<FirstPersonController>().m_MouseLook.lockCursor = false;
+            fpscontroller.GetComponent<FirstPersonController>().m_MouseLook.SetCursorLock(false);
             m_endGame = true;
         }
         // game lost if time out
@@ -57,7 +61,8 @@ public class EndGame : MonoBehaviour {
             // wait a sec so the ads fill up the screen then stop them
             Invoke("stopAds", delay);
             GameOver.enabled = true;
-            fpscontroller.GetComponent<FirstPersonController>().enabled = false;
+            fpscontroller.GetComponent<FirstPersonController>().m_MouseLook.lockCursor = false;
+            fpscontroller.GetComponent<FirstPersonController>().m_MouseLook.SetCursorLock(false);
 
         }
 		
