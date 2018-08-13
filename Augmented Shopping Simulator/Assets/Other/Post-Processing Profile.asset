@@ -149,8 +149,8 @@ MonoBehaviour:
             - serializedVersion: 2
               time: 0
               value: 0
-              inSlope: 1.1120834
-              outSlope: 1.1120834
+              inSlope: 1.0741102
+              outSlope: 1.0741102
               tangentMode: 0
             - serializedVersion: 2
               time: 1
@@ -272,7 +272,7 @@ MonoBehaviour:
           m_Range: 1
         e_CurrentEditingCurve: 0
         e_CurveY: 1
-        e_CurveR: 1
+        e_CurveR: 0
         e_CurveG: 0
         e_CurveB: 0
   userLut:
