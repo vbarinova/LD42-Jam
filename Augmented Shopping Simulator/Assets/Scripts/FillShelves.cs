@@ -11,8 +11,8 @@ public class FillShelves : MonoBehaviour {
     private float secondShelf = 10.4f;
     private float thirdShelf = 18f;
 
-    private float startShelves = 0;
-    private float endShelves = 122.5f;
+    private float startShelves = 2;
+    private float endShelves = 140f;
 
     private float sizePerItem = 4f;
 
