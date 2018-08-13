@@ -18,7 +18,7 @@ public class ReachedEnd : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "player") {
+        if (other.tag == "Cart") {
             reachedEnd = true;
             Debug.Log("COLLIDING WITH ME: " + other);
         }

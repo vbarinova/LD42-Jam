@@ -53,7 +53,7 @@ public class CartTrigger : MonoBehaviour {
 
                 // convert i to 0-numItems/2
                 int index = gameController.GetComponent<RandomizeShoppingList>().returnIndex(other.tag);
-                gameController.GetComponent<RandomizeShoppingList>().updateSHoppingList(i);
+                gameController.GetComponent<RandomizeShoppingList>().updateSHoppingList(index);
 
                 // play success sound
                 audioSource.Play();

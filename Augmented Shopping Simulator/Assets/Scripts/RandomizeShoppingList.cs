@@ -121,7 +121,7 @@ public class RandomizeShoppingList : MonoBehaviour {
         for (int i = 0; i < numItems/2; ++i)
         {
             if (tag == itemsToCollect[i]) return i;
-            
+
         }
         // else something went wrong
         return -1;
