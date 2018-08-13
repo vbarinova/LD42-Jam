@@ -7,6 +7,8 @@ public class CartTrigger : MonoBehaviour {
     [SerializeField]
     private GameObject gameController;
 
+    private AudioSource audioSource;
+
     private int numItems;
 
     private bool[] collected;
@@ -24,6 +26,8 @@ public class CartTrigger : MonoBehaviour {
             collected[i] = false;
         }
 
+        // set up audio
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -48,6 +52,9 @@ public class CartTrigger : MonoBehaviour {
                 other.GetComponent<Pickupable>().hasBeenCollected();
 
                 gameController.GetComponent<RandomizeShoppingList>().updateSHoppingList(i);
+
+                // play success sound
+                audioSource.Play();
 
                 Debug.Log(other.tag + " has been collecetd!" + collected[i]);
 

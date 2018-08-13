@@ -7,10 +7,23 @@ public class EndGame : MonoBehaviour {
     private bool gameOver = false;
     private bool gameWon = false;
 
+    [SerializeField]
+    private GameObject audioObject;
+
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip success;
+
     private float delay = 8f;
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    private void Start()
+    {
+        audioSource = audioObject.GetComponent<AudioSource>();
+    }
+
+    // Update is called once per frame
+    void FixedUpdate () {
 
         // check if game won
         if (this.GetComponent<RandomizeShoppingList>().everythingCollected())
@@ -18,6 +31,10 @@ public class EndGame : MonoBehaviour {
             Debug.Log("You won!");
             this.GetComponent<SpawnAds>().stopAds();
             this.GetComponent<Timer>().stopTimer();
+
+            // play success sound
+            audioSource.clip = success;
+            audioSource.Play();
         }
         // game lost if time out
         else if (this.GetComponent<Timer>().timeEnded())

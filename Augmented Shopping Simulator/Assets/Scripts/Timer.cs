@@ -8,6 +8,16 @@ public class Timer : MonoBehaviour {
     [SerializeField]
     private GameObject timerText;
 
+    [SerializeField]
+    private GameObject audioObject;
+
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioClip countDown;
+
+    private bool playSoundOnce = true;
+
     private float timer = 60f;
 
     private string minutes, seconds;
@@ -16,6 +26,7 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        audioSource = audioObject.GetComponent<AudioSource>();
 		
 	}
 	
@@ -32,6 +43,17 @@ public class Timer : MonoBehaviour {
 
             timerText.GetComponent<TextMeshProUGUI>().text = minutes + ":" + seconds;
         }
+
+        // start count down timer sound
+        if (timer <= 11f && playSoundOnce)
+        {
+            audioSource.clip = countDown;
+            audioSource.Play();
+            Debug.Log("Playing timer sound");
+
+            playSoundOnce = false;
+        }
+        Debug.Log(timer);
             
 	}
 
